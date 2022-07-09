@@ -7,7 +7,7 @@
         <meta name="viewport" content="wdith=device-width, initial-scale=1.0">
         <meta name="keywords" content="">
         <meta name="description" content="">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <style type="text/css">
             .title{
                 font-size: 40px;
@@ -16,16 +16,25 @@
                 padding: 10px;
                 text-shadow: 4px 4px 6px black;
                 color: wheat;
+                margin: 10px;
             }
             ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 list-style: none;
+                padding-top: 15px;
             }
-            li{
-                display: inline;
+            header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0%;
             }
             a{
                 text-decoration: none;
-                padding: 6px;
+                padding: 5px;
                 margin-right: 15px;
                 color: white;
                 font-size: larger;
@@ -41,17 +50,7 @@
                 color: black;
             }
             a:hover{
-               background-color: blue; 
-                
-            }
-            header{
-                display: flex;
-                
-                justify-content: space-between;
-                align-items: center;
-                position: sticky;
-                top: 0;
-                margin: 0px 10px 0px 10px;
+               background-color: blue;  
             }
             input[name="search"]{
                 width: 150px;
@@ -59,42 +58,108 @@
                 margin: 5px;
                 border: none;
             }
-            .search-bar{
-                text-align: center;
-                padding: 5px;
-            }
             .copy-right{
                 text-align: center;
                 font-size: large;
                 padding: 10px;
             }
-            section{
-                height: 650px;
-                background-image: linear-gradient(to right,rgba(0,0,255,0.3),rgba(255, 174, 0, 0.562),rgba(0,255,0,0.3));
+            section .welcome{
+                height: 950px;
+                background: linear-gradient(to bottom,rgba(0, 0, 255, 0.3),rgba(0, 255, 0, 0.3)),url("public/images/work.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
             }
+            .welcome-c{
+                color: white;
+                text-align: center;
+                position: absolute;
+                top: 30%;
+                left: 3%;
+                text-shadow: 2px 2px 2px black;
+            }
+            .contact{
+                height: auto;
+                display: grid;
+                grid-template-columns: 6fr 6fr;
+                margin: 5% 20% 5% 20%;
+            }
+            .contact-title{
+                grid-row: 1;
+                grid-column: 1/3;
+                text-align: center;
+                margin: 5px;
+            }
+            .details{
+                grid-row: 2;
+                grid-column: 2/1;
+            }
+            .details span{
+                display: block;
+                margin: 10px;
+                background-color: gray;
+                border-radius: 10px;
+                width: 350px;
+                padding: 10px;
+            }
+
         </style>
     </head>
-    <body class="container">
+    <body >
         <header>
             <div class="title">
                 Portfolio
             </div>
             <div class="nav-bar">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Profile</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">My Work</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="#contactt">Contact</a></li>
                 </ul>
             </div>
-            <div class="search-bar input-group">
-                <input class="input-group-text" type="text" name="search" placeholder="search"><span class="bi bi-search input-group-text"></span>
+            <div class="search-bar">
+                <form action="" class="input-group">
+                    <input type="text" name="search" placeholder="search" class="form-control">
+                </form>
             </div>
         </header>
         <hr>
         <section>
-
+            <div class="welcome" id="home">
+                <div class="welcome-c">
+                    <h3>Hello, Welcome to</h3>
+                    <h1>My Portfolio Site</h1>
+                    <p>This is a clean and modern HTML5 template with a gradient background.</p>
+                    <p>Thank You</p>
+                </div>
+            </div>
+            <div class="contact" id="contactt">
+                <div class="contact-title">
+                    <h3>Contact</h3>
+                    <h1>Get in Touch!</h1>
+                </div>
+                <div class="details">
+                    <span>
+                        <address>
+                            Building no.00, Street no.00,
+                            Area name, City Name, 
+                            Pincode.
+                        </address>
+                    </span>
+                    <span>0000 0123 456</span>
+                    <span>info@company.co</span>
+                </div>
+                <div class="details-right">
+                    <form action="" class="frm">
+                        <input type="text" name="name" placeholder="Name" class="form-control m-2">
+                        <input type="email" name="email" placeholder="Email" class="form-control m-2">
+                        <textarea class="m-2 p-1" name="text" id="message" cols="50" rows="5" placeholder="Message"></textarea>
+                        <button class="m-2 btn btn-primary text-white" type="submit" name="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </section>
         <hr>
         <footer>
